@@ -9,3 +9,4 @@ VALUES
 ('Marcos','716','943824321','lucas@teste.com','Rua x, n. 16'),
 ('Andre','457','9774576221','andre@teste.com','Rua x, n. 17')
 GO
+ 
