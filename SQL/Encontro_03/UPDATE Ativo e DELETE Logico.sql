@@ -18,3 +18,4 @@ UPDATE Cliente
 SET Ativo = 1, DataAlteracao = GETDATE(), DataExclusao = NULL
 WHERE Codigo = 9
 GO
+ 
