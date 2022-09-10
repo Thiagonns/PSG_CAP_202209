@@ -15,3 +15,4 @@ CREATE TABLE Cliente(
 	CONSTRAINT PK_Cliente PRIMARY KEY (Codigo)
 )
 Go
+ 
