@@ -36,3 +36,4 @@ CREATE TABLE Produto(
     CONSTRAINT FK_Produto_Subcategoria FOREIGN KEY (CodigoSubcategoria) REFERENCES Subcategoria(Codigo)
 )
 GO
+
