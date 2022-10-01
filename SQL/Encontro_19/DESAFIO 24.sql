@@ -65,7 +65,7 @@
 --		END
 --	END
 --SELECT * FROM @ListaSorteados
---
+--GO
 
 
 CREATE PROCEDURE SP_Desafio_24
