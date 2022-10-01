@@ -67,7 +67,6 @@
 --SELECT * FROM @ListaSorteados
 --GO
 
-
 CREATE PROCEDURE SP_Desafio_24
 @QtdDesejada BIGINT
 AS
