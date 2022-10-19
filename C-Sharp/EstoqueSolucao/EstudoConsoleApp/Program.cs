@@ -1,5 +1,6 @@
 ﻿using System;
 using EstudoConsoleApp.Aulas;
+using EstudoConsoleApp.Desafios;
 
 namespace EstudoConsoleApp
 {
@@ -11,7 +12,10 @@ namespace EstudoConsoleApp
             //Executarexemplo02();
             //Executarexemplo03();
             //Executarexemplo04();
-            Executarexemplo05();
+            //Executarexemplo05();
+
+            Desafio10.Executar();
+            //Desafio01v2.Executar();
         }
 
         private static void Executarexemplo01()
