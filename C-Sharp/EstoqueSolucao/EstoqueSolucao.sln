@@ -5,7 +5,11 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstoqueConsoleApp", "EstoqueConsoleApp\EstoqueConsoleApp.csproj", "{8004FCDE-CCED-4EFE-AAEA-1551DDF8B93D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstudoConsoleApp", "EstudoConsoleApp\EstudoConsoleApp.csproj", "{175B9512-6D95-4F13-B944-4167E536F8E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstudoConsoleApp", "EstudoConsoleApp\EstudoConsoleApp.csproj", "{175B9512-6D95-4F13-B944-4167E536F8E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstoqueApp", "EstoqueApp\EstoqueApp.csproj", "{A77A3DB1-EBCA-4E3D-B94B-86D86AAEA1EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Exercicios", "01-Exercicios", "{C467AECB-B18D-4DCB-886F-B528DB0E5064}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +25,17 @@ Global
 		{175B9512-6D95-4F13-B944-4167E536F8E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{175B9512-6D95-4F13-B944-4167E536F8E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{175B9512-6D95-4F13-B944-4167E536F8E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A77A3DB1-EBCA-4E3D-B94B-86D86AAEA1EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A77A3DB1-EBCA-4E3D-B94B-86D86AAEA1EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A77A3DB1-EBCA-4E3D-B94B-86D86AAEA1EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A77A3DB1-EBCA-4E3D-B94B-86D86AAEA1EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8004FCDE-CCED-4EFE-AAEA-1551DDF8B93D} = {C467AECB-B18D-4DCB-886F-B528DB0E5064}
+		{175B9512-6D95-4F13-B944-4167E536F8E5} = {C467AECB-B18D-4DCB-886F-B528DB0E5064}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79B5E920-6CCD-4324-8801-67A8098CE013}
