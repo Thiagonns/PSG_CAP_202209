@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EstoqueApp.Model.Estoque
+namespace Atacado.Poco.Estoque
 {
     public class Produto : BaseEstoque
     {

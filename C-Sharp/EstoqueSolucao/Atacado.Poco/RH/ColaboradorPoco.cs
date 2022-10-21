@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EstoqueApp.Model.RH
+namespace Atacado.Poco.RH
 {
-    public class Colaborador : BaseFisica
+    public class ColaboradorPoco : BaseFisica
     {
         private string ctps;
         private string pis;
@@ -34,35 +34,8 @@ namespace EstoqueApp.Model.RH
         public string Telefone1 { get => telefone1; set => telefone1 = value; }
         public string Telefone2 { get => telefone2; set => telefone2 = value; }
 
-        public Colaborador()
+        public ColaboradorPoco()
         {
-        }
-
-        public Colaborador(int id, string nome, string cpf, string rg, string genero, DateTime nasc, string emailPessoal, string ctps, string pis, string tituloEleitor, bool reservista, string estadoCivil, int numDependentes, bool ativo, string setor, string cargo, double salario, string telefone1, string telefone2)
-            : base(id, nome, cpf, rg, genero, nasc, emailPessoal)
-        {
-            this.ctps = ctps;
-            this.pis = pis;
-            this.tituloEleitor = tituloEleitor;
-            this.reservista = reservista;
-            this.estadoCivil = estadoCivil;
-            this.numDependentes = numDependentes;
-            this.ativo = ativo;
-            this.setor = setor;
-            this.cargo = cargo;
-            this.salario = salario;
-            this.telefone1 = telefone1;
-            this.telefone2 = telefone2;
-        }
-
-        public void Admitir()
-        {
-
-        }
-
-        public void Demitir()
-        {
-
         }
     }
 }
