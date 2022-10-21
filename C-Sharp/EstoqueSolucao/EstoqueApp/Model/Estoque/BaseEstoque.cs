@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EstoqueApp.Model
+namespace EstoqueApp.Model.Estoque
 {
     public abstract class BaseEstoque
     {

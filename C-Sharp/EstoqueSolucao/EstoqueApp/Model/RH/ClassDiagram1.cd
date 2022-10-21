@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EstoqueApp.Model.RH.BasePessoa">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEgA=</HashCode>
+      <FileName>Model\RH\BasePessoa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EstoqueApp.Model.RH.BaseFisica">
+    <Position X="1.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAAAAAgAAAAAAAgAAEAIAABACAAAAAIAAAAGAAAA=</HashCode>
+      <FileName>Model\RH\BaseFisica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EstoqueApp.Model.RH.BaseJuridica">
+    <Position X="6" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEIIAABABAAAAARAAAQAAAAEAAAAAAAACAAAAAAACA=</HashCode>
+      <FileName>Model\RH\BaseJuridica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EstoqueApp.Model.RH.Colaborador">
+    <Position X="1.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAIAEAAiAAAAYIBAAECgARBQIAAAUABAAAAAQRAAAA=</HashCode>
+      <FileName>Model\RH\Colaborador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EstoqueApp.Model.RH.Usuario">
+    <Position X="3.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAIgAAAEIAAACAAAIAIAACAAAAAAAAAQAAgAEAA=</HashCode>
+      <FileName>Model\RH\Usuario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Colaborador" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="EstoqueApp.Model.RH.Parceiro">
+    <Position X="7.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAACAAAAAAAAAAAAAAAACAAAAAwAAAAEAAAAAA=</HashCode>
+      <FileName>Model\RH\Parceiro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EstoqueApp.Model.RH.Prestador">
+    <Position X="4.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAgAAAAAAAABAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\RH\Prestador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
