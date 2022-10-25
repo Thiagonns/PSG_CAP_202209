@@ -15,11 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modelo", "Modelo", "{0DA8E8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Arquitetura", "03 - Arquitetura", "{B210C352-A5D2-4163-BDF5-1EB9E1506C5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atacado.Dominio", "Atacado.Dominio\Atacado.Dominio.csproj", "{60C3CCEA-EE22-4BCF-9989-C729E324F7F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atacado.Dominio", "Atacado.Dominio\Atacado.Dominio.csproj", "{60C3CCEA-EE22-4BCF-9989-C729E324F7F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atacado.Poco", "Atacado.Poco\Atacado.Poco.csproj", "{5A585906-319F-4E72-BB9D-894B73DD8E9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atacado.Poco", "Atacado.Poco\Atacado.Poco.csproj", "{5A585906-319F-4E72-BB9D-894B73DD8E9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atacado.DB.FakeDB", "Atacado.DB.FakeDB\Atacado.DB.FakeDB.csproj", "{0334E380-AD58-43F2-BFFA-C1ADE937F032}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atacado.DB.FakeDB", "Atacado.DB.FakeDB\Atacado.DB.FakeDB.csproj", "{0334E380-AD58-43F2-BFFA-C1ADE937F032}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atacado.Repositorio", "Atacado.Repositorio\Atacado.Repositorio.csproj", "{573634C4-380D-47D6-80E6-4BACF5F5741E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{0334E380-AD58-43F2-BFFA-C1ADE937F032}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0334E380-AD58-43F2-BFFA-C1ADE937F032}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0334E380-AD58-43F2-BFFA-C1ADE937F032}.Release|Any CPU.Build.0 = Release|Any CPU
+		{573634C4-380D-47D6-80E6-4BACF5F5741E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573634C4-380D-47D6-80E6-4BACF5F5741E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573634C4-380D-47D6-80E6-4BACF5F5741E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573634C4-380D-47D6-80E6-4BACF5F5741E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{60C3CCEA-EE22-4BCF-9989-C729E324F7F4} = {B210C352-A5D2-4163-BDF5-1EB9E1506C5A}
 		{5A585906-319F-4E72-BB9D-894B73DD8E9F} = {B210C352-A5D2-4163-BDF5-1EB9E1506C5A}
 		{0334E380-AD58-43F2-BFFA-C1ADE937F032} = {B210C352-A5D2-4163-BDF5-1EB9E1506C5A}
+		{573634C4-380D-47D6-80E6-4BACF5F5741E} = {B210C352-A5D2-4163-BDF5-1EB9E1506C5A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79B5E920-6CCD-4324-8801-67A8098CE013}
