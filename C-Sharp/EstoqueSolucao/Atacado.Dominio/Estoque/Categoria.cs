@@ -21,8 +21,6 @@ namespace Atacado.Dominio.Estoque
             : base(codigo, descricao, ativo, datainclusao)
         {
             this.Subcategorias = new List<Subcategoria>();
-        }
-
-        
+        }        
     }
 }

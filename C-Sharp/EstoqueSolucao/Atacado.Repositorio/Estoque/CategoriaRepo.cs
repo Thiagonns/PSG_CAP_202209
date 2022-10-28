@@ -1,11 +1,12 @@
-﻿using Atacado.Repositorio.Base;
-using Atacado.Dominio.Estoque;
-using Atacado.DB.FakeDB.Estoque;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using Atacado.Repositorio.Base;
+using Atacado.Dominio.Estoque;
+using Atacado.DB.FakeDB.Estoque;
 
 namespace Atacado.Repositorio.Estoque
 {
@@ -15,21 +16,30 @@ namespace Atacado.Repositorio.Estoque
 
         public CategoriaRepo()
         {
-            this.contexto = new EstoqueContexto();  
+            this.contexto = new EstoqueContexto();
         }
+
         public override Categoria Create(Categoria instancia)
         {
-            throw new NotImplementedException();
+            return this.contexto.AddCategoria(instancia);
         }
 
         public override Categoria Delete(int chave)
         {
-            throw new NotImplementedException();
+            Categoria del = this.Read(chave);
+            if (this.contexto.Categorias.Remove(del) == false)
+            {
+                return null;
+            }
+            else
+            {
+                return del;
+            }
         }
 
         public override Categoria Delete(Categoria instancia)
         {
-            throw new NotImplementedException();
+            return this.Delete(instancia.Codigo);
         }
 
         public override Categoria Read(int chave)
@@ -44,7 +54,17 @@ namespace Atacado.Repositorio.Estoque
 
         public override Categoria Update(Categoria instancia)
         {
-            throw new NotImplementedException();
+            Categoria atu = this.Read(instancia.Codigo);
+            if (atu == null)
+            {
+                return null;
+            }
+            else
+            {
+                atu.Descricao = instancia.Descricao;
+                atu.Ativo = instancia.Ativo;
+                return atu;
+            }
         }
     }
 }

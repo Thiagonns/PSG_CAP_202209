@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Atacado.Poco.Estoque
 {
-    public class Produto : BaseEstoque
+    public class ProdutoPoco : BaseEstoque
     {
         private int codigoSubcategoria;
 
         public int CodigoSubcategoria { get => codigoSubcategoria; set => codigoSubcategoria = value; }
 
-        public Produto() : base()
+        public ProdutoPoco() : base()
         {
         }
 
-        public Produto(int codigo, string descricao, bool ativo, DateTime datainclusao, int codigoSubcategoria) : base(codigo, descricao, ativo, datainclusao)
+        public ProdutoPoco(int codigo, string descricao, bool ativo, DateTime datainclusao, int codigoSubcategoria) : base(codigo, descricao, ativo, datainclusao)
         {
             this.codigoSubcategoria = codigoSubcategoria;
         }
