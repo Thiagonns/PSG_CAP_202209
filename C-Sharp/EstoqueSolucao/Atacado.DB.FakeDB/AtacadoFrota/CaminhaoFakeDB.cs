@@ -14,6 +14,7 @@ namespace Atacado.DB.FakeDB.AtacadoFrota
 
         public static List<Caminhao> Caminhoes
         {
+            get
             {
                 if (caminhoes == null)
                 {
