@@ -16,7 +16,7 @@ namespace Atacado.Poco.Estoque
         public int Codigo { get => codigo; set => codigo = value; }
         public string Descricao { get => descricao; set => descricao = value; }
         public bool Ativo { get => ativo; set => ativo = value; }
-        public DateTime Datainclusao { get => datainclusao; set => datainclusao = value; }
+        public DateTime DataInclusao { get => datainclusao; set => datainclusao = value; }
 
         public BaseEstoque()
         {

@@ -14,7 +14,6 @@ namespace Atacado.Servico.Base
         public abstract TPoco Add(TPoco poco);
         public abstract TPoco Delete(int chave);
         public abstract TPoco Delete(TPoco poco);
-
         public abstract TPoco ConvertTo(TDominio dominio);
         public abstract TDominio ConvertTo(TPoco poco);
 

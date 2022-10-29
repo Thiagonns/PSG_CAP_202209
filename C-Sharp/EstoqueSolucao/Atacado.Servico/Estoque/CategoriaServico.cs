@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Atacado.Servico.Base;
 using Atacado.Dominio.Estoque;
 using Atacado.Poco.Estoque;
@@ -12,7 +8,7 @@ namespace Atacado.Servico.Estoque
 {
     public class CategoriaServico : BaseServico<CategoriaPoco, Categoria>
     {
-        private CategoriaPoco repo;
+        private CategoriaRepo repo;
 
         public CategoriaServico() : base()
         {
@@ -22,43 +18,69 @@ namespace Atacado.Servico.Estoque
         {
             Categoria nova = this.ConvertTo(poco);
             Categoria criada = this.repo.Create(nova);
-            CategoriaPoco criadaPoco = this.ConvertTo(criada);
-            return criadaPoco;
+            return this.ConvertTo(criada);
         }
 
         public override List<CategoriaPoco> Browse()
         {
-            throw new NotImplementedException();
+            //List<Categoria> lista = this.repo.Read();
+            //List<CategoriaPoco> listaPoco = new List<CategoriaPoco>();
+
+            //foreach (Categoria item in lista)
+            //{
+            //    CategoriaPoco poco = this.ConvertTo(item);
+            //    listaPoco.Add(poco);
+            //}
+            //return listaPoco;
+
+            List<CategoriaPoco> ListaPoco = this.repo.Read().Select(cat => new CategoriaPoco()
+            {
+                Codigo = cat.Codigo,
+                Descricao = cat.Descricao,
+                Ativo = cat.Ativo,
+                DataInclusao = cat.DataInclusao
+            }
+            ).ToList();
+            return ListaPoco;
         }
 
         public override CategoriaPoco ConvertTo(Categoria dominio)
         {
-            return new CategoriaPoco(dominio.Codigo, dominio.Descricao, dominio.Ativo, dominio.Datainclusao);
+            return new CategoriaPoco(dominio.Codigo, dominio.Descricao, dominio.Ativo, dominio.DataInclusao);
         }
 
         public override Categoria ConvertTo(CategoriaPoco poco)
         {
-            return new Categoria(poco.Codigo, poco.Descricao, poco.Ativo, poco.Datainclusao);
+            return new Categoria(poco.Codigo, poco.Descricao, poco.Ativo, poco.DataInclusao);
         }
 
         public override CategoriaPoco Delete(int chave)
         {
-            throw new NotImplementedException();
+            Categoria del = this.repo.Delete(chave);
+            CategoriaPoco delPoco = this.ConvertTo(del);
+            return delPoco;
         }
 
         public override CategoriaPoco Delete(CategoriaPoco poco)
         {
-            throw new NotImplementedException();
+            Categoria del = this.repo.Delete(poco.Codigo);
+            CategoriaPoco delPoco = this.ConvertTo(del);
+            return delPoco;
         }
 
         public override CategoriaPoco Edit(CategoriaPoco poco)
         {
-            throw new NotImplementedException();
+            Categoria editada = this.ConvertTo(poco);
+            Categoria alterada = this.repo.Update(editada);
+            CategoriaPoco alteradaPoco = this.ConvertTo(alterada);
+            return alteradaPoco;
         }
 
         public override CategoriaPoco Read(int chave)
         {
-            throw new NotImplementedException();
+            Categoria lida = this.repo.Read(chave);
+            CategoriaPoco lidaPoco = this.ConvertTo(lida);
+            return lidaPoco;
         }
     }
 }
