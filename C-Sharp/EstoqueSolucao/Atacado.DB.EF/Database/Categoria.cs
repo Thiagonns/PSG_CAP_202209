@@ -20,6 +20,8 @@ namespace Atacado.DB.EF.Database
         public string Descricao { get; set; } = null!;
         [Column(TypeName = "datetime")]
         public DateTime DataInsert { get; set; }
+        [Column(name:"Ativo")]
+        public bool? Ativo { get; set; }
 
         [InverseProperty("CodigoCategoriaNavigation")]
         public virtual ICollection<Subcategoria> Subcategoria { get; set; }

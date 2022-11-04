@@ -3,6 +3,7 @@ using Atacado.Servico.Base;
 using Atacado.DB.EF.Database;
 using Atacado.Poco.Estoque;
 using Atacado.Repositorio.Estoque;
+using System.Linq.Expressions;
 
 namespace Atacado.Servico.Estoque
 {
@@ -37,10 +38,34 @@ namespace Atacado.Servico.Estoque
             {
                 Codigo = cat.Codigo,
                 Descricao = cat.Descricao,
+                Ativo = cat.Ativo,
                 DataInsert = cat.DataInsert
             }
             ).ToList();
             return ListaPoco;
+        }
+
+        public override List<CategoriaPoco> Browse(Expression<Func<Categoria, bool>> filtro = null)
+        {
+            List<CategoriaPoco> listaPoco;
+            IQueryable<Categoria> query;
+            if(filtro == null)
+            {
+                query = this.repo.Read(null);
+            }
+            else
+            {
+                query = this.repo.Read(filtro);
+            }
+            listaPoco = query.Select(cat => new CategoriaPoco()
+            {
+                Codigo = cat.Codigo,
+                Descricao = cat.Descricao,
+                Ativo = cat.Ativo,
+                DataInsert = cat.DataInsert
+            }
+            ).ToList();
+            return listaPoco;
         }
 
         public override CategoriaPoco ConvertTo(Categoria dominio)
@@ -49,6 +74,7 @@ namespace Atacado.Servico.Estoque
             {
                 Codigo = dominio.Codigo,
                 Descricao = dominio.Descricao,
+                Ativo = dominio.Ativo,
                 DataInsert = dominio.DataInsert
             };
         }
@@ -59,6 +85,7 @@ namespace Atacado.Servico.Estoque
             {
                 Codigo = poco.Codigo,
                 Descricao = poco.Descricao,
+                Ativo = poco.Ativo,
                 DataInsert = poco.DataInsert
             };
         }

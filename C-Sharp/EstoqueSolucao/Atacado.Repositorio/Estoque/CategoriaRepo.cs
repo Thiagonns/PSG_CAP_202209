@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Atacado.Repositorio.Base;
 using Atacado.DB.EF.Database;
+using System.Linq.Expressions;
 
 namespace Atacado.Repositorio.Estoque
 {
@@ -21,6 +22,7 @@ namespace Atacado.Repositorio.Estoque
         public override Categoria Create(Categoria instancia)
         {
             this.contexto.Categorias.Add(instancia);
+            this.contexto.SaveChanges();
             return instancia;
         }
 
@@ -34,6 +36,7 @@ namespace Atacado.Repositorio.Estoque
             else
             {
                 this.contexto.Categorias.Remove(del);
+                this.contexto.SaveChanges();
                 return del;
             }
         }
@@ -53,6 +56,18 @@ namespace Atacado.Repositorio.Estoque
             return this.contexto.Categorias.ToList();
         }
 
+        public override IQueryable<Categoria> Read(Expression<Func<Categoria, bool>> predicate = null)
+        {
+            if (predicate == null)
+            {
+                return this.contexto.Categorias.AsQueryable();
+            }
+            else
+            {
+                return this.contexto.Categorias.Where(predicate).AsQueryable();
+            }
+        }
+
         public override Categoria Update(Categoria instancia)
         {
             Categoria atu = this.Read(instancia.Codigo);
@@ -63,6 +78,8 @@ namespace Atacado.Repositorio.Estoque
             else
             {
                 atu.Descricao = instancia.Descricao;
+                atu.Ativo = instancia.Ativo;
+                this.contexto.SaveChanges();
                 return atu;
             }
         }

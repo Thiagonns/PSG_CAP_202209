@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq.Expressions;
 
 namespace Atacado.Repositorio.Estoque
 {
@@ -20,6 +21,7 @@ namespace Atacado.Repositorio.Estoque
         public override Subcategoria Create(Subcategoria instancia)
         {
             this.contexto.Subcategorias.Add(instancia);
+            this.contexto.SaveChanges();
             return instancia;
         }
 
@@ -33,6 +35,7 @@ namespace Atacado.Repositorio.Estoque
             else
             {
                 this.contexto.Subcategorias.Remove(del);
+                this.contexto.SaveChanges();
                 return del;
             }
         }
@@ -52,6 +55,18 @@ namespace Atacado.Repositorio.Estoque
             return this.contexto.Subcategorias.ToList();
         }
 
+        public override IQueryable<Subcategoria> Read(Expression<Func<Subcategoria, bool>> predicate = null)
+        {
+            if(predicate == null)
+            {
+                return this.contexto.Subcategorias.AsQueryable();
+            }
+            else
+            {
+                return this.contexto.Subcategorias.Where(predicate).AsQueryable();
+            }
+        }
+
         public override Subcategoria Update(Subcategoria instancia)
         {
             Subcategoria atu = this.Read(instancia.Codigo);
@@ -62,7 +77,9 @@ namespace Atacado.Repositorio.Estoque
             else
             {
                 atu.Descricao = instancia.Descricao;
+                atu.Ativo = instancia.Ativo;
                 atu.CodigoCategoria = instancia.CodigoCategoria;
+                this.contexto.SaveChanges();
                 return atu;
             }
         }

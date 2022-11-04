@@ -15,5 +15,6 @@ namespace Atacado.Poco.Estoque
         public string Descricao { get; set; } = null!;
 
         public DateTime DataInsert { get; set; }
+        public bool? Ativo { get; set; }
     }
 }
