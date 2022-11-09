@@ -1,5 +1,6 @@
 ﻿using Atacado.DB.EF.Database;
 using Atacado.Poco.Estoque;
+using Atacado.Repositorio.Base;
 using Atacado.Repositorio.Estoque;
 using Atacado.Servico.Base;
 using System;
@@ -13,42 +14,22 @@ namespace Atacado.Servico.Estoque
 {
     public class ProdutoServico : BaseServico<ProdutoPoco, Produto>
     {
-        private ProdutoRepo repo;
+        private GenericRepository<Produto> genrepo;
 
         public ProdutoServico() : base()
         {
-            this.repo = new ProdutoRepo();
+            this.genrepo = new GenericRepository<Produto>();
         }
         public override ProdutoPoco Add(ProdutoPoco poco)
         {
             Produto nova = this.ConvertTo(poco);
-            Produto criada = this.repo.Create(nova);
+            Produto criada = this.genrepo.Insert(nova);
             return this.ConvertTo(criada);
         }
 
         public override List<ProdutoPoco> Browse()
         {
-            //List<Categoria> lista = this.repo.Read();
-            //List<CategoriaPoco> listaPoco = new List<CategoriaPoco>();
-
-            //foreach (Categoria item in lista)
-            //{
-            //    CategoriaPoco poco = this.ConvertTo(item);
-            //    listaPoco.Add(poco);
-            //}
-            //return listaPoco;
-
-            List<ProdutoPoco> ListaPoco = this.repo.Read().Select(cat => new ProdutoPoco()
-            {
-                Codigo = cat.Codigo,
-                CodigoCategoria = cat.CodigoCategoria,
-                CodigoSubcategoria = cat.CodigoSubcategoria,                
-                Descricao = cat.Descricao,
-                Ativo = cat.Ativo,
-                DataInsert = cat.DataInsert
-            }
-            ).ToList();
-            return ListaPoco;
+            return this.Browse(null);
         }
 
         public override List<ProdutoPoco> Browse(Expression<Func<Produto, bool>> filtro = null)
@@ -57,11 +38,11 @@ namespace Atacado.Servico.Estoque
             IQueryable<Produto> query;
             if (filtro == null)
             {
-                query = this.repo.Read(null);
+                query = this.genrepo.Browseable(null);
             }
             else
             {
-                query = this.repo.Read(filtro);
+                query = this.genrepo.Browseable(filtro);
             }
             listaPoco = query.Select(cat => new ProdutoPoco()
             {
@@ -102,14 +83,14 @@ namespace Atacado.Servico.Estoque
 
         public override ProdutoPoco Delete(int chave)
         {
-            Produto del = this.repo.Delete(chave);
+            Produto del = this.genrepo.Delete(chave);
             ProdutoPoco delPoco = this.ConvertTo(del);
             return delPoco;
         }
 
         public override ProdutoPoco Delete(ProdutoPoco poco)
         {
-            Produto del = this.repo.Delete(poco.Codigo);
+            Produto del = this.genrepo.Delete(poco.Codigo);
             ProdutoPoco delPoco = this.ConvertTo(del);
             return delPoco;
         }
@@ -117,14 +98,14 @@ namespace Atacado.Servico.Estoque
         public override ProdutoPoco Edit(ProdutoPoco poco)
         {
             Produto editada = this.ConvertTo(poco);
-            Produto alterada = this.repo.Update(editada);
+            Produto alterada = this.genrepo.Update(editada);
             ProdutoPoco alteradaPoco = this.ConvertTo(alterada);
             return alteradaPoco;
         }
 
         public override ProdutoPoco Read(int chave)
         {
-            Produto lida = this.repo.Read(chave);
+            Produto lida = this.genrepo.GetById(chave);
             ProdutoPoco lidaPoco = this.ConvertTo(lida);
             return lidaPoco;
         }

@@ -10,44 +10,23 @@ namespace Atacado.Servico.Estoque
 {
     public class CategoriaServico : BaseServico<CategoriaPoco, Categoria>
     {
-        private CategoriaRepo repo;
 
         private GenericRepository<Categoria> genrepo;
 
         public CategoriaServico() : base()
         {
-            this.repo = new CategoriaRepo();
             this.genrepo = new GenericRepository<Categoria>();
         }
         public override CategoriaPoco Add(CategoriaPoco poco)
         {
             Categoria nova = this.ConvertTo(poco);
-            //Categoria criada = this.repo.Create(nova);
             Categoria criada = this.genrepo.Insert(nova);
             return this.ConvertTo(criada);
         }
 
         public override List<CategoriaPoco> Browse()
         {
-            //List<Categoria> lista = this.repo.Read();
-            //List<CategoriaPoco> listaPoco = new List<CategoriaPoco>();
-
-            //foreach (Categoria item in lista)
-            //{
-            //    CategoriaPoco poco = this.ConvertTo(item);
-            //    listaPoco.Add(poco);
-            //}
-            //return listaPoco;
-
-            List<CategoriaPoco> ListaPoco = this.repo.Read().Select(cat => new CategoriaPoco()
-            {
-                Codigo = cat.Codigo,
-                Descricao = cat.Descricao,
-                Ativo = cat.Ativo,
-                DataInsert = cat.DataInsert
-            }
-            ).ToList();
-            return ListaPoco;
+            return this.Browse(null);
         }
 
         public override List<CategoriaPoco> Browse(Expression<Func<Categoria, bool>> filtro = null)
@@ -56,12 +35,10 @@ namespace Atacado.Servico.Estoque
             IQueryable<Categoria> query;
             if(filtro == null)
             {
-                //query = this.repo.Read(null);
                 query = this.genrepo.Browseable(null);
             }
             else
             {
-                //query = this.repo.Read(filtro);
                 query = this.genrepo.Browseable(filtro);
             }
             listaPoco = query.Select(cat => new CategoriaPoco()
@@ -96,36 +73,28 @@ namespace Atacado.Servico.Estoque
                 DataInsert = poco.DataInsert
             };
         }
-
         public override CategoriaPoco Delete(int chave)
         {
-            //Categoria del = this.repo.Delete(chave);
             Categoria del = this.genrepo.Delete(chave);
             CategoriaPoco delPoco = this.ConvertTo(del);
 
             return delPoco;
         }
-
         public override CategoriaPoco Delete(CategoriaPoco poco)
         {
-            //Categoria del = this.repo.Delete(poco.Codigo);
             Categoria del = this.genrepo.Delete(poco.Codigo);
             CategoriaPoco delPoco = this.ConvertTo(del);
             return delPoco;
         }
-
         public override CategoriaPoco Edit(CategoriaPoco poco)
         {
             Categoria editada = this.ConvertTo(poco);
-            //Categoria alterada = this.repo.Update(editada);
             Categoria alterada = this.genrepo.Update(editada);
             CategoriaPoco alteradaPoco = this.ConvertTo(alterada);
             return alteradaPoco;
         }
-
         public override CategoriaPoco Read(int chave)
         {
-            //Categoria lida = this.repo.Read(chave);
             Categoria lida = this.genrepo.GetById(chave);
             CategoriaPoco lidaPoco = this.ConvertTo(lida);
             return lidaPoco;

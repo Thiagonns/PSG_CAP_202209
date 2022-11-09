@@ -1,5 +1,6 @@
 ﻿using Atacado.DB.EF.Database;
 using Atacado.Poco.Estoque;
+using Atacado.Repositorio.Base;
 using Atacado.Repositorio.Estoque;
 using Atacado.Servico.Base;
 using System;
@@ -13,41 +14,22 @@ namespace Atacado.Servico.Estoque
 {
     public class SubcategoriaServico : BaseServico<SubcategoriaPoco, Subcategoria>
     {
-        private SubcategoriaRepo repo;
+        private GenericRepository<Subcategoria> genrepo;
 
         public SubcategoriaServico() : base()
         {
-            repo = new SubcategoriaRepo();
+            this.genrepo = new GenericRepository<Subcategoria>();
         }
         public override SubcategoriaPoco Add(SubcategoriaPoco poco)
         {
             Subcategoria nova = ConvertTo(poco);
-            Subcategoria criada = repo.Create(nova);
+            Subcategoria criada = genrepo.Insert(nova);
             return ConvertTo(criada);
         }
 
         public override List<SubcategoriaPoco> Browse()
         {
-            //List<Categoria> lista = this.repo.Read();
-            //List<CategoriaPoco> listaPoco = new List<CategoriaPoco>();
-
-            //foreach (Categoria item in lista)
-            //{
-            //    CategoriaPoco poco = this.ConvertTo(item);
-            //    listaPoco.Add(poco);
-            //}
-            //return listaPoco;
-
-            List<SubcategoriaPoco> ListaPoco = repo.Read().Select(cat => new SubcategoriaPoco()
-            {
-                Codigo = cat.Codigo,
-                CodigoCategoria = cat.CodigoCategoria,
-                Descricao = cat.Descricao,
-                Ativo = cat.Ativo,
-                DataInsert = cat.DataInsert
-            }
-            ).ToList();
-            return ListaPoco;
+            return this.Browse(null);
         }
 
         public override List<SubcategoriaPoco> Browse(Expression<Func<Subcategoria, bool>> filtro = null)
@@ -56,11 +38,11 @@ namespace Atacado.Servico.Estoque
             IQueryable<Subcategoria> query;
             if (filtro == null)
             {
-                query = this.repo.Read(null);
+                query = this.genrepo.Browseable(null);
             }
             else
             {
-                query = this.repo.Read(filtro);
+                query = this.genrepo.Browseable(filtro);
             }
             listaPoco = query.Select(cat => new SubcategoriaPoco()
             {
@@ -100,14 +82,14 @@ namespace Atacado.Servico.Estoque
 
         public override SubcategoriaPoco Delete(int chave)
         {
-            Subcategoria del = repo.Delete(chave);
+            Subcategoria del = genrepo.Delete(chave);
             SubcategoriaPoco delPoco = ConvertTo(del);
             return delPoco;
         }
 
         public override SubcategoriaPoco Delete(SubcategoriaPoco poco)
         {
-            Subcategoria del = repo.Delete(poco.Codigo);
+            Subcategoria del = genrepo.Delete(poco.Codigo);
             SubcategoriaPoco delPoco = ConvertTo(del);
             return delPoco;
         }
@@ -115,14 +97,14 @@ namespace Atacado.Servico.Estoque
         public override SubcategoriaPoco Edit(SubcategoriaPoco poco)
         {
             Subcategoria editada = ConvertTo(poco);
-            Subcategoria alterada = repo.Update(editada);
+            Subcategoria alterada = genrepo.Update(editada);
             SubcategoriaPoco alteradaPoco = ConvertTo(alterada);
             return alteradaPoco;
         }
 
         public override SubcategoriaPoco Read(int chave)
         {
-            Subcategoria lida = repo.Read(chave);
+            Subcategoria lida = genrepo.GetById(chave);
             SubcategoriaPoco lidaPoco = ConvertTo(lida);
             return lidaPoco;
         }
