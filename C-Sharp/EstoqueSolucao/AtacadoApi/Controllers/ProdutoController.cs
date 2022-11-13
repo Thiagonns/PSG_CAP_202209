@@ -1,6 +1,8 @@
-﻿using Atacado.Poco.Estoque;
-using Atacado.Servico.Estoque;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+
+using Atacado.Poco.Estoque;
+using Atacado.Servico.Estoque;
 
 namespace AtacadoApi.Controllers
 {
@@ -22,174 +24,89 @@ namespace AtacadoApi.Controllers
         }
 
         /// <summary>
-        /// Lista todos os registros da tabela.
+        /// 
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult<List<ProdutoPoco>> Obter()
+        public List<ProdutoPoco> Get()
         {
-            try
-            {
-                List<ProdutoPoco> list = this.servico.Browse();
-                return Ok(list);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.ToString());
-            }
+            return this.servico.Listar();
         }
 
         /// <summary>
-        /// Lista os registros filtrando por categoria.
+        /// 
         /// </summary>
-        /// <param name="catid">Identificador da tabela categoria.</param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("{id:int}")]
+        public ProdutoPoco GetPorId(int id)
+        {
+            return this.servico.PesquisarPelaChave(id);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="catid"></param>
         /// <returns></returns>
         [HttpGet("PorCategoria/{catid:int}")]
-        public ActionResult<List<ProdutoPoco>> ObterPorCategoria(int catid)
+        public List<ProdutoPoco> GetPorCategoriaId(int catid)
         {
-            try
-            {
-                List<ProdutoPoco> list = this.servico.Browse(prod => prod.CodigoCategoria == catid).ToList();
-                return Ok(list);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.ToString());
-            }
+            return this.servico.Consultar(prd => prd.CodigoCategoria == catid);
         }
 
         /// <summary>
-        /// Lista os registros filtrando por Subcategoria.
+        /// 
         /// </summary>
-        /// <param name="subid">Identificador da tabela subcategoria.</param>
+        /// <param name="subid"></param>
         /// <returns></returns>
         [HttpGet("PorSubcategoria/{subid:int}")]
-        public ActionResult<List<ProdutoPoco>> ObterPorSubcategoria(int subid)
+        public List<ProdutoPoco> GetPorSubcategoriaId(int subid)
         {
-            try
-            {
-                List<ProdutoPoco> list = this.servico.Browse(prod => prod.CodigoSubcategoria == subid).ToList();
-                return Ok(list);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.ToString());
-            }
+            return this.servico.Consultar(prd => prd.CodigoSubcategoria == subid);
         }
 
         /// <summary>
-        /// Lista os registros filtrando por categoria e subcategoria.
+        /// 
         /// </summary>
-        /// <param name="catid">Identificador da tabela categoria.</param>
-        /// <param name="subid">Identificador da tabela subcategoria.</param>
+        /// <param name="catid"></param>
+        /// <param name="subid"></param>
         /// <returns></returns>
         [HttpGet("PorCategoria/{catid:int}/PorSubcategoria/{subid:int}")]
-        public ActionResult<List<ProdutoPoco>> ObterPorCategoriaPorSubcategoria(int catid, int subid)
+        public List<ProdutoPoco> GetPorCategoriaPorSubcategoria(int catid, int subid)
         {
-            try
-            {
-                List<ProdutoPoco> list = this.servico.Browse(prod => (prod.CodigoCategoria == catid) && (prod.CodigoSubcategoria == subid)).ToList();
-                return Ok(list);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.ToString());
-            } 
+            return this.servico.Consultar(prd => (prd.CodigoCategoria == catid) && (prd.CodigoSubcategoria == subid));
         }
 
         /// <summary>
-        /// Lista os registros filtrando por codigo Id.
+        /// 
         /// </summary>
-        /// <param name="codigo">Identificador dos registros na tabela.</param>
-        /// <returns></returns>
-        [HttpGet("{codigo:int}")]
-        public ActionResult<ProdutoPoco> ObterPorId(int codigo)
-        {
-            try
-            {
-                ProdutoPoco readPoco = this.servico.Read(codigo);
-                return Ok(readPoco);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.ToString());
-            }
-        }
-
-        /// <summary>
-        /// Cria um novo registro na tabela.
-        /// </summary>
-        /// <param name="poco"></param>
-        /// <returns></returns>
+        /// <param name="value"></param>
         [HttpPost]
-        public ActionResult<ProdutoPoco> Criar([FromBody] ProdutoPoco poco)
+        public ProdutoPoco Post([FromBody] ProdutoPoco poco)
         {
-            try
-            {
-                ProdutoPoco AddPoco = this.servico.Add(poco);
-                return Ok(AddPoco);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.ToString());
-            }
+            return this.servico.Inserir(poco);
         }
 
         /// <summary>
-        /// Altera um registro da tabela.
+        /// 
         /// </summary>
-        /// <param name="poco"></param>
-        /// <returns></returns>
-        [HttpPut]
-        public ActionResult<ProdutoPoco> Atualizar([FromBody] ProdutoPoco poco)
+        /// <param name="id"></param>
+        /// <param name="value"></param>
+        [HttpPut("{id}")]
+        public ProdutoPoco Put([FromBody] ProdutoPoco poco)
         {
-            try
-            {
-                ProdutoPoco editPoco = this.servico.Edit(poco);
-                return Ok(editPoco);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.ToString());
-            }
+            return this.servico.Alterar(poco);
         }
 
         /// <summary>
-        /// Exclui o registro associado ao Id informado.
+        /// 
         /// </summary>
-        /// <param name="codigo"></param>
-        /// <returns></returns>
-        [HttpDelete("{codigo:int}")]
-        public ActionResult<ProdutoPoco> ExcluirPorId(int codigo)
+        /// <param name="id"></param>
+        [HttpDelete("{id}")]
+        public ProdutoPoco Delete(int id)
         {
-            try
-            {
-                ProdutoPoco delPoco = this.servico.Delete(codigo);
-                return Ok(delPoco);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.ToString());
-            }
-        }
-
-        /// <summary>
-        /// Exclui o registo de acordo com a instância informada.
-        /// </summary>
-        /// <param name="poco"></param>
-        /// <returns></returns>
-        [HttpDelete]
-        public ActionResult<ProdutoPoco> ExcluirPorInstancia([FromBody] ProdutoPoco poco)
-        {
-            try
-            {
-                ProdutoPoco delPoco = this.servico.Delete(poco);
-                return Ok(delPoco);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.ToString());
-            }
+            return this.servico.Excluir(id);
         }
     }
 }

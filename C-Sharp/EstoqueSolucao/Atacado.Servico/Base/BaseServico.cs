@@ -10,7 +10,7 @@ namespace Atacado.Servico.Base
     public abstract class BaseServico<TPoco, TDominio> where TPoco : class where TDominio : class
     {
         public abstract List<TPoco> Browse();
-        public abstract List<TPoco> Browse(Expression<Func<TDominio, bool>> filtro = null);
+        public abstract List<TPoco> Browse(Expression<Func<TDominio, bool>>? filtro = null);
         public abstract TPoco Read(int chave);
         public abstract TPoco Edit(TPoco poco);
         public abstract TPoco Add(TPoco poco);
