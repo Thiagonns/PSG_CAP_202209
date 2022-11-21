@@ -13,9 +13,9 @@ namespace Atacado.Repositorio.Base
     {
         private ProjetoAcademiaContext context;
         private DbSet<TDominio> table;
-        public GenericRepository()
+        public GenericRepository(ProjetoAcademiaContext context)
         {
-            this.context = new ProjetoAcademiaContext();
+            this.context = context;
             this.table = this.context.Set<TDominio>();
         }
         public IQueryable<TDominio> Browseable(Expression<Func<TDominio, bool>>? predicate = null)

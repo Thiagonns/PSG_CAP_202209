@@ -28,11 +28,17 @@ namespace Atacado.DB.EF.Database
         public virtual DbSet<Profissao> Profissoes { get; set; } = null!;
         public virtual DbSet<Subcategoria> Subcategorias { get; set; } = null!;
 
+        //Criado pelo Desenvolvedor
+        public virtual DbSet<Rebanho> Rebanhos { get; set; } = null!;
+
+        public virtual DbSet<TipoRebanho> TipoRebanhos { get; set; } = null!;
+        //Criado pelo Desenvolvedor
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=psgs0071.psg.local; Initial Catalog=Academia;User=academia;Password=@cadem1@555;");
+               // optionsBuilder.UseSqlServer("Data Source=psgs0071.psg.local; Initial Catalog=Academia;User=academia;Password=@cadem1@555;");
             }
         }
 
@@ -132,6 +138,26 @@ namespace Atacado.DB.EF.Database
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_SubCategoria_Categoria");
             });
+
+            //criado pelo dev
+
+            modelBuilder.Entity<TipoRebanho>(entity =>
+            {
+                entity.Property(e => e.DataInclusao).HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.Situacao).HasDefaultValueSql("((1))");
+            });
+
+            //Verificar
+            modelBuilder.Entity<Rebanho>(entity =>
+            {
+                entity.Property(e => e.DataInclusao).HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.Situacao).HasDefaultValueSql("((1))");
+            });
+            // Verificar até aqui
+
+            //criado pelo dev
 
             OnModelCreatingPartial(modelBuilder);
         }

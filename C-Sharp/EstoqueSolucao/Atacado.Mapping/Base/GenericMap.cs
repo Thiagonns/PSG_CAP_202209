@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace Atacado.Mapping.Base
 {
-    public class GenericMap<TDominio, TPoco> where TDominio : class where TPoco : class
+    public class GenericMap<TDominio, TPoco> 
+        where TDominio : class 
+        where TPoco : class
     {
         public IMapper Mapping { get; }
         public GenericMap()

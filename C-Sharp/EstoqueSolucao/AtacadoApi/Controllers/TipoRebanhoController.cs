@@ -1,43 +1,41 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Atacado.Poco.Estoque;
-using Atacado.Servico.Estoque;
+﻿
 using Atacado.DB.EF.Database;
+using Atacado.Poco.Pecuaria;
+using Atacado.Servico.Pecuaria;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AtacadoApi.Controllers
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    [Route("api/estoque/[controller]")]
+    [Route("api/pecuaria/[controller]")]
     [ApiController]
-    public class CategoriaController : ControllerBase
+    public class TipoRebanhoController : ControllerBase
     {
-        private CategoriaServico servico;
+        private TipoRebanhoServico servico;
 
         /// <summary>
         /// 
         /// </summary>
-        public CategoriaController(ProjetoAcademiaContext contexto) : base()
+        public TipoRebanhoController(ProjetoAcademiaContext contexto) : base()
         {
-            this.servico = new CategoriaServico(contexto);
+            servico = new TipoRebanhoServico(contexto);
         }
-        
+
         /// <summary>
         /// Lista todos os registros da tabela.
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult<List<CategoriaPoco>> Obter()
+        public ActionResult<List<TipoRebanhoPoco>> Obter()
         {
             try
             {
-                List<CategoriaPoco>  lista = this.servico.Listar();
+                List<TipoRebanhoPoco> lista = servico.Listar();
                 return Ok(lista);
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.ToString());
-            }            
+            }
         }
 
         /// <summary>
@@ -46,11 +44,11 @@ namespace AtacadoApi.Controllers
         /// <param name="codigo">Identificador dos registros. </param>
         /// <returns></returns>
         [HttpGet("{codigo:int}")]
-        public ActionResult<CategoriaPoco> ObterPorId(int codigo)
+        public ActionResult<TipoRebanhoPoco> ObterPorId(int codigo)
         {
             try
             {
-                CategoriaPoco poco = this.servico.PesquisarPelaChave(codigo);
+                TipoRebanhoPoco poco = servico.PesquisarPelaChave(codigo);
                 return Ok(poco);
             }
             catch (Exception ex)
@@ -65,17 +63,17 @@ namespace AtacadoApi.Controllers
         /// <param name="poco"></param>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult<CategoriaPoco> Criar([FromBody] CategoriaPoco poco)
+        public ActionResult<TipoRebanhoPoco> Criar([FromBody] TipoRebanhoPoco poco)
         {
             try
             {
-                CategoriaPoco criarPoco = this.servico.Inserir(poco);
+                TipoRebanhoPoco criarPoco = servico.Inserir(poco);
                 return Ok(criarPoco);
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.ToString());
-            }             
+            }
         }
 
         /// <summary>
@@ -84,11 +82,11 @@ namespace AtacadoApi.Controllers
         /// <param name="poco"></param>
         /// <returns></returns>
         [HttpPut]
-        public ActionResult<CategoriaPoco> Atualizar([FromBody] CategoriaPoco poco)
+        public ActionResult<TipoRebanhoPoco> Atualizar([FromBody] TipoRebanhoPoco poco)
         {
             try
             {
-                CategoriaPoco atualizarPoco = this.servico.Alterar(poco);
+                TipoRebanhoPoco atualizarPoco = servico.Alterar(poco);
                 return Ok(atualizarPoco);
             }
             catch (Exception ex)
@@ -103,31 +101,12 @@ namespace AtacadoApi.Controllers
         /// <param name="codigo"></param>
         /// <returns></returns>
         [HttpDelete("{codigo:int}")]
-        public ActionResult<CategoriaPoco> ExcluirPorId(int codigo)
+        public ActionResult<TipoRebanhoPoco> ExcluirPorId(int codigo)
         {
             try
             {
-                CategoriaPoco excluirPoco = this.servico.Excluir(codigo);
+                TipoRebanhoPoco excluirPoco = servico.Excluir(codigo);
                 return Ok(excluirPoco);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.ToString());
-            }
-        }
-
-        /// <summary>
-        /// Exclui o registo de acordo com a instância informada.
-        /// </summary>
-        /// <param name="poco"></param>
-        /// <returns></returns>
-        [HttpDelete]
-        public ActionResult<CategoriaPoco> ExcluirPorInstancia([FromBody] CategoriaPoco poco)
-        {
-            try
-            {
-                CategoriaPoco delPoco = this.servico.Excluir(poco.Codigo);
-                return Ok(delPoco);
             }
             catch (Exception ex)
             {

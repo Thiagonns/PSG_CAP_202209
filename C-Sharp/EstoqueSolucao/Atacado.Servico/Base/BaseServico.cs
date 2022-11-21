@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace Atacado.Servico.Base
 {
-    public abstract class BaseServico<TPoco, TDominio> where TPoco : class where TDominio : class
+    public abstract class BaseServico<TPoco, TDominio> 
+        where TPoco : class 
+        where TDominio : class
     {
         public abstract List<TPoco> Browse();
         public abstract List<TPoco> Browse(Expression<Func<TDominio, bool>>? filtro = null);
