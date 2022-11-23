@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinica.Dominio.EF", "Clinica.Dominio.EF\Clinica.Dominio.EF.csproj", "{EAC86E0D-F46C-46AF-B0A9-3A72736794D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clinica.Dominio.EF", "Clinica.Dominio.EF\Clinica.Dominio.EF.csproj", "{EAC86E0D-F46C-46AF-B0A9-3A72736794D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinica.Poco", "Clinica.Poco\Clinica.Poco.csproj", "{059744B2-D53C-4077-A5BD-A989FA19299E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clinica.Poco", "Clinica.Poco\Clinica.Poco.csproj", "{059744B2-D53C-4077-A5BD-A989FA19299E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinica.Repositorio", "Clinica.Repositorio\Clinica.Repositorio.csproj", "{471C2EA2-A5AE-4081-B414-0936C3C05CAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clinica.Repositorio", "Clinica.Repositorio\Clinica.Repositorio.csproj", "{471C2EA2-A5AE-4081-B414-0936C3C05CAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinica.Mapping", "Clinica.Mapping\Clinica.Mapping.csproj", "{83241F07-B2C7-4B8A-B635-89BAA0E8840E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clinica.Mapping", "Clinica.Mapping\Clinica.Mapping.csproj", "{83241F07-B2C7-4B8A-B635-89BAA0E8840E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinica.Servico", "IGenericService\Clinica.Servico.csproj", "{981F343C-4B1A-439D-B065-1A8B09129332}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaApi", "ClinicaApi\ClinicaApi.csproj", "{8F409302-4DB3-435B-8E32-141CB8B3E8EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{83241F07-B2C7-4B8A-B635-89BAA0E8840E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83241F07-B2C7-4B8A-B635-89BAA0E8840E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83241F07-B2C7-4B8A-B635-89BAA0E8840E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{981F343C-4B1A-439D-B065-1A8B09129332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{981F343C-4B1A-439D-B065-1A8B09129332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{981F343C-4B1A-439D-B065-1A8B09129332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{981F343C-4B1A-439D-B065-1A8B09129332}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F409302-4DB3-435B-8E32-141CB8B3E8EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F409302-4DB3-435B-8E32-141CB8B3E8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F409302-4DB3-435B-8E32-141CB8B3E8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F409302-4DB3-435B-8E32-141CB8B3E8EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

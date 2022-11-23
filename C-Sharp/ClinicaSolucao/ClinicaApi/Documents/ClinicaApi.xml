@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClinicaApi</name>
+    </assembly>
+    <members>
+        <member name="T:ClinicaApi.Controllers.PacienteController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ClinicaApi.Controllers.PacienteController.#ctor(Clinica.Dominio.EF.ClinicaContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ClinicaApi.Controllers.PacienteController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da Tabela.
+            </summary>
+            <returns> Todos os registros. </returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.PacienteController.GetById(System.Int32)">
+            <summary>
+             Busca o registro usando usanso ID do Paciente.
+            </summary>
+            <param name="chave"> Chave de pesquisa. </param>
+            <returns> Registro localizado. </returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.PacienteController.Post(Clinica.Poco.PacientePoco)">
+            <summary>
+            Inclui um novo registro na tabela.
+            </summary>
+            <param name="poco"> Dados que será incluido. </param>
+            <returns> Dados incluido. </returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.PacienteController.Put(Clinica.Poco.PacientePoco)">
+            <summary>
+            Altera um registro existente.
+            </summary>
+            <param name="poco"> Altera o dado selecionado. </param>
+            <returns> Altera o dado selecionado. </returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.PacienteController.DeleteById(System.Int32)">
+            <summary>
+            Exclui um registro existente por id.
+            </summary>
+            <param name="chave"> Chave para localização. </param>
+            <returns> Dado excluido por Id. </returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.PacienteController.Delete(Clinica.Poco.PacientePoco)">
+            <summary>
+            Realiza a exclusão de um registro por instância.
+            </summary>
+            <param name="poco"> Instancia a ser informada. </param>
+            <returns> Dado excluido por Instancia. </returns>
+        </member>
+    </members>
+</doc>

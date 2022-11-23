@@ -9,7 +9,7 @@ using Clinica.Dominio.EF;
 
 namespace Clinica.Repositorio
 {
-    public class GenericRepository<TDominio> : IGenericRepository<TDominio> where TDominio : class
+    public class GenericRepository<TDominio> where TDominio : class
     {
         private ClinicaContext context;
         private DbSet<TDominio> table;

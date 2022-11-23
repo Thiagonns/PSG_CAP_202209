@@ -9,7 +9,7 @@ namespace Clinica.Dominio.EF
 {
     public partial class ClinicaContext : DbContext
     {
-        public DbSet<Paciente> pacientes { get; set; } = null!;
+        public DbSet<Paciente> Pacientes { get; set; } = null!;
         protected ClinicaContext() : base()
         {
         }

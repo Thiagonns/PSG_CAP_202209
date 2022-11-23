@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 
 namespace Clinica.Dominio.EF
 {
+    [Table("Paciente", Schema = "dbo")]
     public partial class Paciente
     {
-		[Key]
+        [Key]
 		public int CodigoPaciente { get; set; }
 
         [Column(name:"Nome")]
@@ -30,7 +31,7 @@ namespace Clinica.Dominio.EF
         [Column(name: "DataDeNascimento", TypeName = "datetime")]
         public DateTime DataDeNascimento { get; set; }
 
-        [Column(name: "CodigoProfissao", TypeName = "datetime")]
+        [Column(name: "CodigoProfissao")]
         public int CodigoProfissao { get; set; }
 
         [Column(name: "RG")]
@@ -46,10 +47,10 @@ namespace Clinica.Dominio.EF
         [Column(name: "Situacao")]
         public bool? Situacao { get; set; }
 
-        [Column(name: "DataInclusao")]
-        public DateTime DataInclusao { get; set; }
+        [Column(name: "DataInclusao", TypeName = "datetime")]
+        public DateTime? DataInclusao { get; set; }
 
-        [Column(name: "DataAlteracao")]
-        public DateTime DataAlteracao { get; set; }
+        [Column(name: "DataAlteracao", TypeName = "datetime")]
+        public DateTime? DataAlteracao { get; set; }
     }
 }

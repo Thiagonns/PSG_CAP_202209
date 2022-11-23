@@ -22,7 +22,7 @@ namespace Clinica.Poco
         public string? RG { get; set; }
         public string? CPF { get; set; }
         public bool? Situacao { get; set; }
-        public DateTime DataInclusao { get; set; }
-        public DateTime DataAlteracao { get; set; }
+        public DateTime? DataInclusao { get; set; }
+        public DateTime? DataAlteracao { get; set; }
     }
 }
