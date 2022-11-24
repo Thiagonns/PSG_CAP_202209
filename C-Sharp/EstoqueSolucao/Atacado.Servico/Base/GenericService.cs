@@ -88,14 +88,14 @@ namespace Atacado.Servico.Base
             return delPoco;
         }
 
-        public virtual TDominio ConverterPara(TPoco obj)
+        public virtual TDominio ConverterPara(TPoco poco)
         {
-            return this.genmap.Mapping.Map<TDominio>(obj);
+            return this.genmap.Mapping.Map<TDominio>(poco);
         }
 
-        public virtual TPoco ConverterPara(TDominio obj)
+        public virtual TPoco ConverterPara(TDominio dominio)
         {
-            return this.genmap.Mapping.Map<TPoco>(obj);
+            return this.genmap.Mapping.Map<TPoco>(dominio);
         }
 
         public virtual List<TPoco> ConverterPara(IQueryable<TDominio> query)

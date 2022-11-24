@@ -58,8 +58,7 @@ namespace Atacado.Servico.Pecuaria
                     DataInclusao = reb.DataInclusao,
                     DataAlteracao = reb.DataAlteracao,
                     DataExclusao = reb.DataExclusao,
-                }
-                )
+                })
                 .ToList();
         }
     }

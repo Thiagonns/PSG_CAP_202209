@@ -42,18 +42,5 @@ namespace Atacado.Servico.Pecuaria
                 .ToList();
             return listaPoco;
         }
-
-        public override TipoRebanhoPoco ConverterPara(TipoRebanho obj)
-        {
-            return new TipoRebanhoPoco() 
-            { 
-                CodigoTipo = obj.CodigoTipo,
-                Descricao = obj.Descricao,
-                Situacao = obj.Situacao,
-                DataInclusao = obj.DataInclusao,
-                DataAlteracao = obj.DataAlteracao,
-                DataExclusao = obj.DataExclusao 
-            };
-        }
     }
 }

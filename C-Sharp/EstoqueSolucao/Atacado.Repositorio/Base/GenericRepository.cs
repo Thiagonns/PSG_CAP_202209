@@ -50,7 +50,7 @@ namespace Atacado.Repositorio.Base
         public TDominio? Insert(TDominio obj)
         {
             this.table.Add(obj);
-            this.context.SaveChanges();
+            this.context.SaveChanges();  //verificar
             return obj;
         }
 
@@ -64,7 +64,7 @@ namespace Atacado.Repositorio.Base
 
         public TDominio? Delete(object id)
         {
-            TDominio existing = this.GetById(id);
+            TDominio? existing = this.GetById(id);
             if (existing != null)
             {
                 this.table.Remove(existing);

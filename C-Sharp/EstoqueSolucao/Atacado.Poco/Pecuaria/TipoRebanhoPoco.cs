@@ -1,7 +1,19 @@
-﻿namespace Atacado.Poco.Pecuaria
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Atacado.Poco.Pecuaria
 {
     public class TipoRebanhoPoco
     {
+        public TipoRebanhoPoco()
+        {
+        }
+
         public int CodigoTipo { get; set; }
 
         public string Descricao { get; set; } = null!;
