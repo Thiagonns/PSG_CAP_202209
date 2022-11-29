@@ -22,8 +22,8 @@ namespace Clinica.Servico.Base
 
         public GenericService(ClinicaContext context)
         {
-            genrepo = new GenericRepository<TDominio>(context);
-            genmap = new GenericMap<TDominio, TPoco>();
+            this.genrepo = new GenericRepository<TDominio>(context);
+            this.genmap = new GenericMap<TDominio, TPoco>();
         }
 
         public List<TPoco> Listar()

@@ -19,8 +19,8 @@ namespace Clinica.Poco
         public string Telefone { get; set; } = null!;
         public DateTime DataDeNascimento { get; set; }
         public int CodigoProfissao { get; set; }
-        public string? RG { get; set; }
-        public string? CPF { get; set; }
+        public string? RG { get; set; } = null!;
+        public string? CPF { get; set; } = null!;
         public bool? Situacao { get; set; }
         public DateTime? DataInclusao { get; set; }
         public DateTime? DataAlteracao { get; set; }

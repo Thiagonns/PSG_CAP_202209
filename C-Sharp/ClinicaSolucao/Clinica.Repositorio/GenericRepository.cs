@@ -64,7 +64,7 @@ namespace Clinica.Repositorio
 
         public TDominio? Delete(object id)
         {
-            TDominio existing = this.GetById(id);
+            TDominio? existing = this.GetById(id);
             if (existing != null)
             {
                 this.table.Remove(existing);

@@ -37,12 +37,12 @@ namespace Clinica.Dominio.EF
         [Column(name: "RG")]
         [Unicode(false)]
         [StringLength(11)]
-        public string? RG { get; set; }
+        public string? RG { get; set; } = null!;
 
         [Column(name: "CPF")]
         [Unicode(false)]
         [StringLength(14)]
-        public string? CPF { get; set; }
+        public string? CPF { get; set; } = null!;
 
         [Column(name: "Situacao")]
         public bool? Situacao { get; set; }
