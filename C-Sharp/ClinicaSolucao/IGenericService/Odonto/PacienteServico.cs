@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clinica.Servico.Clinica
+namespace Clinica.Servico.Odonto
 {
     public class PacienteServico : GenericService<Paciente, PacientePoco>
     {
@@ -62,24 +62,6 @@ namespace Clinica.Servico.Clinica
                     }
             )
             .ToList();
-        }
-
-        public override PacientePoco ConverterPara(Paciente obj)
-        {
-            return new PacientePoco()
-            {
-                CodigoPaciente = obj.CodigoPaciente,
-                Nome = obj.Nome,
-                Endereco = obj.Endereco,
-                Telefone = obj.Telefone,
-                DataDeNascimento = obj.DataDeNascimento,
-                CodigoProfissao = obj.CodigoProfissao,
-                RG = obj.RG,
-                CPF = obj.CPF,
-                Situacao = obj.Situacao,
-                DataInclusao = obj.DataInclusao,
-                DataAlteracao = obj.DataAlteracao
-            };
         }
     }
 }
