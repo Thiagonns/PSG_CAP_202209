@@ -44,6 +44,35 @@ namespace Clinica.Servico.Odonto
             return ConverterPara(query);
         }
 
+        public override List<ServicoPoco> Vasculhar(int? take = null, int? skip = null, Expression<Func<Dominio.EF.Servico, bool>>? predicate = null)
+        {
+            IQueryable<Clinica.Dominio.EF.Servico> query;
+
+            if (skip == null)
+            {
+                if (predicate == null)
+                {
+                    query = this.genrepo.Browseable(null);
+                }
+                else
+                {
+                    query = this.genrepo.Browseable(predicate);
+                }
+            }
+            else
+            {
+                if (predicate == null)
+                {
+                    query = this.genrepo.GetAll(take, skip);
+                }
+                else
+                {
+                    query = this.genrepo.Searshable(take, skip, predicate);
+                }
+            }
+            return ConverterPara(query);
+        }
+
         public override List<ServicoPoco> ConverterPara(IQueryable<Clinica.Dominio.EF.Servico> query)
         {
             return query.Select(pro =>

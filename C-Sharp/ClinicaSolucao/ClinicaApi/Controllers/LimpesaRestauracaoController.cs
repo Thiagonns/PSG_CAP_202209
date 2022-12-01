@@ -1,16 +1,16 @@
 ﻿using Clinica.Dominio.EF;
 using Clinica.Poco;
 using Clinica.Servico.Odonto;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using LinqKit;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ClinicaApi.Controllers
 {
-    [Route("api/clinica/procedimentos/[controller]")]
+    [Route("api/clinica/[controller]")]
     [ApiController]
-    public class ExameController : ControllerBase
+    public class LimpesaRestauracaoController : ControllerBase
     {
+
         /// <summary>
         /// 
         /// </summary>
@@ -20,7 +20,7 @@ namespace ClinicaApi.Controllers
         /// 
         /// </summary>
         /// <param name="context"></param>
-        public ExameController(ClinicaContext context) : base()
+        public LimpesaRestauracaoController(ClinicaContext context) : base()
         {
             this.servico = new ProcedimentosServico(context);
         }
@@ -59,7 +59,7 @@ namespace ClinicaApi.Controllers
                     }
                     else
                     {
-                        predicado = predicado.And(s => s.TipoServico == "EX");
+                        predicado = predicado.And(s => s.TipoServico == "LR");
                         listPoco = this.servico.Vasculhar(take, skip, predicado);
                         return Ok(listPoco);
                     }
