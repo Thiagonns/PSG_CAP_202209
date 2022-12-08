@@ -158,6 +158,53 @@
             <param name="chave"> Chave para localização. </param>
             <returns> Dado excluido por Id. </returns>
         </member>
+        <member name="F:ClinicaApi.Controllers.ExtracaoController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ClinicaApi.Controllers.ExtracaoController.#ctor(Clinica.Dominio.EF.ClinicaContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ClinicaApi.Controllers.ExtracaoController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros 
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.ExtracaoController.GetById(System.Int32)">
+            <summary>
+             Busca o registro usando usanso ID do Paciente.
+            </summary>
+            <param name="chave"> Chave de pesquisa. </param>
+            <returns> Registro localizado. </returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.ExtracaoController.Post(Clinica.Poco.ServicoPoco)">
+            <summary>
+            Inclui um novo registro na tabela.
+            </summary>
+            <param name="poco"> Dados que será incluido. </param>
+            <returns> Dados incluido. </returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.ExtracaoController.Put(Clinica.Poco.ServicoPoco)">
+            <summary>
+            Altera um registro existente.
+            </summary>
+            <param name="poco"> Altera o dado selecionado. </param>
+            <returns> Altera o dado selecionado. </returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.ExtracaoController.DeleteById(System.Int32)">
+            <summary>
+            Exclui um registro existente por id.
+            </summary>
+            <param name="chave"> Chave para localização. </param>
+            <returns> Dado excluido por Id. </returns>
+        </member>
         <member name="F:ClinicaApi.Controllers.LimpesaRestauracaoController.servico">
             <summary>
             
@@ -305,6 +352,89 @@
             </summary>
             <param name="chave"></param>
             <returns></returns>
+        </member>
+        <member name="T:ClinicaApi.Controllers.TipoServicoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ClinicaApi.Controllers.TipoServicoController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ClinicaApi.Controllers.TipoServicoController.#ctor(Clinica.Dominio.EF.ClinicaContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ClinicaApi.Controllers.TipoServicoController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.TipoServicoController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.TipoServicoController.Post(Clinica.Poco.TipoServicoPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="F:ClinicaApi.Controllers.TratamentoCanalController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ClinicaApi.Controllers.TratamentoCanalController.#ctor(Clinica.Dominio.EF.ClinicaContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ClinicaApi.Controllers.TratamentoCanalController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros 
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.TratamentoCanalController.GetById(System.Int32)">
+            <summary>
+             Busca o registro usando usanso ID do Paciente.
+            </summary>
+            <param name="chave"> Chave de pesquisa. </param>
+            <returns> Registro localizado. </returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.TratamentoCanalController.Post(Clinica.Poco.ServicoPoco)">
+            <summary>
+            Inclui um novo registro na tabela.
+            </summary>
+            <param name="poco"> Dados que será incluido. </param>
+            <returns> Dados incluido. </returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.TratamentoCanalController.Put(Clinica.Poco.ServicoPoco)">
+            <summary>
+            Altera um registro existente.
+            </summary>
+            <param name="poco"> Altera o dado selecionado. </param>
+            <returns> Altera o dado selecionado. </returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.TratamentoCanalController.DeleteById(System.Int32)">
+            <summary>
+            Exclui um registro existente por id.
+            </summary>
+            <param name="chave"> Chave para localização. </param>
+            <returns> Dado excluido por Id. </returns>
         </member>
     </members>
 </doc>

@@ -83,12 +83,15 @@ namespace Clinica.Servico.Odonto
                         Preco = pro.Preco,
                         MaterialUsado = pro.MaterialUsado,
                         DenteTratado = pro.DenteTratado,
+                        DenteExtraido = pro.DenteExtraido,
+                        DenteCanalPar = pro.DenteCanalPar,
                         MedidaPreventiva = pro.MedidaPreventiva,
                         TipoExame = pro.TipoExame,
                         TipoServico = pro.TipoServico,
                         Situacao = pro.Situacao,
                         DataInclusao = pro.DataInclusao,
-                        DataAlteracao = pro.DataAlteracao
+                        DataAlteracao = pro.DataAlteracao,
+                        CodigoTipoServico = pro.CodigoTipoServico
                     }
             )
             .ToList();

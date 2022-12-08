@@ -33,7 +33,7 @@ namespace Clinica.Dominio.EF
         public string Descricao { get; set; } = null!;
 
         [Column(name: "Preco")]
-        public Double Preco { get; set; } 
+        public Decimal Preco { get; set; } 
 
         [Column(name: "MaterialUsado")]
         [Unicode(false)]
@@ -41,6 +41,12 @@ namespace Clinica.Dominio.EF
 
         [Column(name: "DenteTratado")]
         public int? DenteTratado { get; set; }
+
+        [Column(name: "DenteExtraido")]
+        public int? DenteExtraido { get; set; }
+
+        [Column(name: "DenteCanalPar")]
+        public int? DenteCanalPar { get; set; }
 
         [Column(name: "MedidaPreventiva")]
         [Unicode(false)]
@@ -62,5 +68,8 @@ namespace Clinica.Dominio.EF
 
         [Column(name: "DataAlteracao", TypeName = "datetime")]
         public DateTime? DataAlteracao { get; set; }
+
+        [Column(name: "CodigoTipoServico")]
+        public int? CodigoTipoServico { get; set; }
     }
 }

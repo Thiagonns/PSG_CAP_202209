@@ -12,15 +12,18 @@ namespace Clinica.Mapping
         where TPoco : class
     {
         public IMapper Mapping { get; }
+
+        public MapperConfiguration? Config { get; }
+
         public GenericMap()
         {
-            var configuration = new MapperConfiguration(cfg =>
+            MapperConfiguration? config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<TDominio, TPoco>();
                 cfg.CreateMap<TPoco, TDominio>();
             });
 
-            var mapper = configuration.CreateMapper();
+            this.Mapping = config.CreateMapper();
         }
     }
 }

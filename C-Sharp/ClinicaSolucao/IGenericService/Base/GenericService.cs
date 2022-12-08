@@ -92,12 +92,12 @@ namespace Clinica.Servico.Base
             return delPoco;
         }
 
-        public virtual TDominio ConverterPara(TPoco poco)
+        public TDominio ConverterPara(TPoco poco)
         {
             return this.genmap.Mapping.Map<TDominio>(poco);
         }
 
-        public virtual TPoco ConverterPara(TDominio dominio)
+        public TPoco ConverterPara(TDominio dominio)
         {
             return this.genmap.Mapping.Map<TPoco>(dominio);
         }
