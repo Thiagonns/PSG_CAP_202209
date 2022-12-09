@@ -14,7 +14,7 @@ namespace ViajeFacil.Dominio.EF
     {
         [Key]
         [Column(name: "id_cidade")]
-        public int CidadeId { get; set; }
+        public long CidadeId { get; set; }
 
         [Column(name: "nome")]
         [Unicode(false)]
@@ -22,7 +22,7 @@ namespace ViajeFacil.Dominio.EF
         public string Nome { get; set; } = null!;
 
         [Column(name: "codigo_ibge7")]
-        public int CodigoIBGE7 { get; set; }
+        public long CodigoIBGE7 { get; set; }
 
         [Column(name: "uf")]
         [Unicode(false)]
@@ -30,6 +30,6 @@ namespace ViajeFacil.Dominio.EF
         public string? UF { get; set; } = null!;
 
         [Column(name: "id_estado")]
-        public int EstadoId { get; set; }
+        public long EstadoId { get; set; }
     }
 }

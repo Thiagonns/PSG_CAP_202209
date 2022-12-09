@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ViajeFacil.Dominio.EF
 {
-    public partial class ViajeFacilContext : DbContext
+    public partial class ViajeFacilContexto : DbContext
     {
         public DbSet<Pais> Paises { get; set; } = null!;
         public DbSet<Regiao> Regioes { get; set; } = null!;
@@ -24,17 +24,17 @@ namespace ViajeFacil.Dominio.EF
 
 
 
-        protected ViajeFacilContext() : base()
+        protected ViajeFacilContexto() : base()
         {
         }
-        public ViajeFacilContext(DbContextOptions<ViajeFacilContext> options) : base(options)
+        public ViajeFacilContexto(DbContextOptions<ViajeFacilContexto> options) : base(options)
         {
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                 optionsBuilder.UseSqlServer("Data Source=(local); Initial Catalog=SA;User=sa;Password=Senha123;");
+                 //optionsBuilder.UseSqlServer("Data Source=(local); Initial Catalog=SA;User=sa;Password=Senha123;");
             }
         }
 

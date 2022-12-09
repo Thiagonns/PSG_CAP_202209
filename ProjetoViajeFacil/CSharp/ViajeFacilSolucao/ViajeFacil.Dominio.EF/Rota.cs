@@ -18,7 +18,7 @@ namespace ViajeFacil.Dominio.EF
 
         [Key]
         [Column(name: "id_rota")]
-        public int RotaId { get; set; }
+        public long RotaId { get; set; }
 
         [Column(name: "ponto_inicial")]
         [Unicode(false)]

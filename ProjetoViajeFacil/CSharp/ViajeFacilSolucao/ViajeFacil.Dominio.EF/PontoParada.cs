@@ -20,7 +20,7 @@ namespace ViajeFacil.Dominio.EF
 
         [Key]
         [Column(name: "id_ponto_parada")]
-        public int PontoParadaId { get; set; }
+        public long PontoParadaId { get; set; }
 
         [Column(name: "descricao")]
         [Unicode(false)]
@@ -38,6 +38,6 @@ namespace ViajeFacil.Dominio.EF
         public string Longitude { get; set; } = null!;
 
         [Column(name: "id_rota")]
-        public int RotaId { get; set; }
+        public long RotaId { get; set; }
     }
 }

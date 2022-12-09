@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>Documents\ViajeFacilApi.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LinqKit.Core" Version="1.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ViajeFacil.Mapping\ViajeFacil.Mapping.csproj" />
+    <ProjectReference Include="..\ViajeFacil.Poco\ViajeFacil.Poco.csproj" />
+    <ProjectReference Include="..\ViajeFacil.Repositorio\ViajeFacil.Repositorio.csproj" />
+    <ProjectReference Include="..\ViajeFacil.Servico\ViajeFacil.Servico.csproj" />
+  </ItemGroup>
+
+</Project>

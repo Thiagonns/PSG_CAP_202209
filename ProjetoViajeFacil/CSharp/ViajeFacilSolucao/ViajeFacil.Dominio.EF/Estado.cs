@@ -14,7 +14,7 @@ namespace ViajeFacil.Dominio.EF
     {
         [Key]
         [Column(name: "id_estado")]
-        public int EstadoId { get; set; }
+        public long EstadoId { get; set; }
 
         [Column(name: "nome")]
         [Unicode(false)]
@@ -22,7 +22,7 @@ namespace ViajeFacil.Dominio.EF
         public string Nome { get; set; } = null!;
 
         [Column(name: "codigouf")]
-        public int? CodigoUf { get; set; }
+        public long? CodigoUf { get; set; }
 
         [Column(name: "uf")]
         [Unicode(false)]
@@ -30,6 +30,6 @@ namespace ViajeFacil.Dominio.EF
         public string UF { get; set; } = null!;
 
         [Column(name: "id_regiao")]
-        public int RegiaoId { get; set; }
+        public long RegiaoId { get; set; }
     }
 }

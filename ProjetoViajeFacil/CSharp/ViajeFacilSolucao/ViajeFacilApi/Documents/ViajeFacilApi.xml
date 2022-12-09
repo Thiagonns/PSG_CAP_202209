@@ -1,0 +1,608 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ViajeFacilApi</name>
+    </assembly>
+    <members>
+        <member name="T:ViajeFacilApi.Controllers.CidadeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ViajeFacilApi.Controllers.CidadeController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.CidadeController.#ctor(ViajeFacil.Dominio.EF.ViajeFacilContexto)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.CidadeController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.CidadeController.GetById(System.Int64)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.CidadeController.Post(ViajeFacil.Poco.CidadePoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.CidadeController.Put(ViajeFacil.Poco.CidadePoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.CidadeController.DeleteById(System.Int64)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViajeFacilApi.Controllers.EnderecoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ViajeFacilApi.Controllers.EnderecoController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EnderecoController.#ctor(ViajeFacil.Dominio.EF.ViajeFacilContexto)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EnderecoController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EnderecoController.GetById(System.Int64)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EnderecoController.Post(ViajeFacil.Poco.EnderecoPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EnderecoController.Put(ViajeFacil.Poco.EnderecoPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EnderecoController.DeleteById(System.Int64)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViajeFacilApi.Controllers.EstadoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ViajeFacilApi.Controllers.EstadoController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EstadoController.#ctor(ViajeFacil.Dominio.EF.ViajeFacilContexto)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EstadoController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EstadoController.GetById(System.Int64)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EstadoController.Post(ViajeFacil.Poco.EstadoPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EstadoController.Put(ViajeFacil.Poco.EstadoPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EstadoController.DeleteById(System.Int64)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViajeFacilApi.Controllers.EventoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ViajeFacilApi.Controllers.EventoController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EventoController.#ctor(ViajeFacil.Dominio.EF.ViajeFacilContexto)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EventoController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EventoController.GetById(System.Int64)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EventoController.Post(ViajeFacil.Poco.EventoPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EventoController.Put(ViajeFacil.Poco.EventoPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.EventoController.DeleteById(System.Int64)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViajeFacilApi.Controllers.InstituicaoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ViajeFacilApi.Controllers.InstituicaoController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.InstituicaoController.#ctor(ViajeFacil.Dominio.EF.ViajeFacilContexto)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.InstituicaoController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.InstituicaoController.GetById(System.Int64)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.InstituicaoController.Post(ViajeFacil.Poco.InstituicaoPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.InstituicaoController.Put(ViajeFacil.Poco.InstituicaoPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.InstituicaoController.DeleteById(System.Int64)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViajeFacilApi.Controllers.PaisController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ViajeFacilApi.Controllers.PaisController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.PaisController.#ctor(ViajeFacil.Dominio.EF.ViajeFacilContexto)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.PaisController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.PaisController.GetById(System.Int64)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.PaisController.Post(ViajeFacil.Poco.PaisPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.PaisController.Put(ViajeFacil.Poco.PaisPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.PaisController.DeleteById(System.Int64)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViajeFacilApi.Controllers.ParticipanteEventoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ViajeFacilApi.Controllers.ParticipanteEventoController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.ParticipanteEventoController.#ctor(ViajeFacil.Dominio.EF.ViajeFacilContexto)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.ParticipanteEventoController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.ParticipanteEventoController.GetById(System.Int64)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.ParticipanteEventoController.Post(ViajeFacil.Poco.ParticipanteEventoPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.ParticipanteEventoController.Put(ViajeFacil.Poco.ParticipanteEventoPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.ParticipanteEventoController.DeleteById(System.Int64)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViajeFacilApi.Controllers.PontoParadaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ViajeFacilApi.Controllers.PontoParadaController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.PontoParadaController.#ctor(ViajeFacil.Dominio.EF.ViajeFacilContexto)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.PontoParadaController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.PontoParadaController.GetById(System.Int64)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.PontoParadaController.Post(ViajeFacil.Poco.PontoParadaPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.PontoParadaController.Put(ViajeFacil.Poco.PontoParadaPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.PontoParadaController.DeleteById(System.Int64)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViajeFacilApi.Controllers.RegiaoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ViajeFacilApi.Controllers.RegiaoController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.RegiaoController.#ctor(ViajeFacil.Dominio.EF.ViajeFacilContexto)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.RegiaoController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.RegiaoController.GetById(System.Int64)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.RegiaoController.Post(ViajeFacil.Poco.RegiaoPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.RegiaoController.Put(ViajeFacil.Poco.RegiaoPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.RegiaoController.DeleteById(System.Int64)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViajeFacilApi.Controllers.RotaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ViajeFacilApi.Controllers.RotaController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.RotaController.#ctor(ViajeFacil.Dominio.EF.ViajeFacilContexto)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.RotaController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.RotaController.GetById(System.Int64)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.RotaController.Post(ViajeFacil.Poco.RotaPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.RotaController.Put(ViajeFacil.Poco.RotaPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.RotaController.DeleteById(System.Int64)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViajeFacilApi.Controllers.TipoUsuarioController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ViajeFacilApi.Controllers.TipoUsuarioController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.TipoUsuarioController.#ctor(ViajeFacil.Dominio.EF.ViajeFacilContexto)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.TipoUsuarioController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.TipoUsuarioController.GetById(System.Int64)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.TipoUsuarioController.Post(ViajeFacil.Poco.TipoUsuarioPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.TipoUsuarioController.Put(ViajeFacil.Poco.TipoUsuarioPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.TipoUsuarioController.DeleteById(System.Int64)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ViajeFacilApi.Controllers.UsuarioController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ViajeFacilApi.Controllers.UsuarioController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.UsuarioController.#ctor(ViajeFacil.Dominio.EF.ViajeFacilContexto)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.UsuarioController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.UsuarioController.GetById(System.Int64)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.UsuarioController.Post(ViajeFacil.Poco.UsuarioPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.UsuarioController.Put(ViajeFacil.Poco.UsuarioPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ViajeFacilApi.Controllers.UsuarioController.DeleteById(System.Int64)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

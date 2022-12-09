@@ -21,10 +21,10 @@ namespace ViajeFacil.Dominio.EF
 
         [Key]
         [Column(name: "id_participante_evento")]
-        public int ParticipanteEventoId { get; set; }
+        public long ParticipanteEventoId { get; set; }
 
         [Column(name: "id_evento")]
-        public int EventoId { get; set; }
+        public long EventoId { get; set; }
         
         [Column(name: "pagamento")]
         public int Pagamento { get; set; }
@@ -38,6 +38,6 @@ namespace ViajeFacil.Dominio.EF
         public int? Avaliacao { get; set; }
 
         [Column(name: "id_usuario")]
-        public int? UsuarioId { get; set; }
+        public long? UsuarioId { get; set; }
     }
 }

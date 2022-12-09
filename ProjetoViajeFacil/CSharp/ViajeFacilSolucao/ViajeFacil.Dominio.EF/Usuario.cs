@@ -25,7 +25,7 @@ namespace ViajeFacil.Dominio.EF
 
         [Key]
         [Column(name: "id_usuario")]
-        public int UsuarioId { get; set; }
+        public long UsuarioId { get; set; }
 
         [Column(name: "nome")]
         [Unicode(false)]
@@ -58,12 +58,12 @@ namespace ViajeFacil.Dominio.EF
         public string Senha { get; set; } = null!;
 
         [Column(name: "id_instituicao")]
-        public int InstituicaoId { get; set; }
+        public long InstituicaoId { get; set; }
 
         [Column(name: "id_endereco")]
-        public int EnderecoId { get; set; }
+        public long EnderecoId { get; set; }
 
         [Column(name: "id_tipo_usuario")]
-        public int TipoUsuarioId { get; set; }
+        public long TipoUsuarioId { get; set; }
     }
 }

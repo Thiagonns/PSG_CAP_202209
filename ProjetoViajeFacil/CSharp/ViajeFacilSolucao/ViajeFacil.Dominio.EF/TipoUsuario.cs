@@ -17,7 +17,7 @@ namespace ViajeFacil.Dominio.EF
 
         [Key]
         [Column(name: "id_tipo_usuario")]
-        public int TipoUsuarioId { get; set; }
+        public long TipoUsuarioId { get; set; }
 
         [Column(name: "descricao")]
         [Unicode(false)]

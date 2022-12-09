@@ -27,7 +27,7 @@ namespace ViajeFacil.Dominio.EF
 
         [Key]
         [Column(name: "id_endereco")]
-        public int EnderecoId { get; set; }
+        public long EnderecoId { get; set; }
 
         [Column(name: "rua")]
         [Unicode(false)]
@@ -53,6 +53,6 @@ namespace ViajeFacil.Dominio.EF
         public string CEP { get; set; } = null!;
 
         [Column(name: "id_cidade")]
-        public int CidadeId { get; set; }
+        public long CidadeId { get; set; }
     }
 }

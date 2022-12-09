@@ -25,10 +25,10 @@ namespace ViajeFacil.Dominio.EF
 
         [Key]
         [Column(name: "id_evento")]
-        public int EventoId { get; set; }
+        public long EventoId { get; set; }
 
         [Column(name: "id_usuario_responsavel")]
-        public int UsuarioResponsavelId { get; set; }
+        public long UsuarioResponsavelId { get; set; }
 
         [Column(name: "titulo")]
         [Unicode(false)]
@@ -41,21 +41,21 @@ namespace ViajeFacil.Dominio.EF
         public string Descricao { get; set; } = null!;
 
         [Column(name: "id_endereco")]
-        public int EnderecoId { get; set; }
+        public long EnderecoId { get; set; }
 
         [Column(name: "data_ida", TypeName = "date")]
-        public DateOnly DataIda { get; set; }
+        public DateTime DataIda { get; set; }
 
         [Column(name: "id_rota_ida")]
-        public int RotaIdaId { get; set; }
+        public long RotaIdaId { get; set; }
 
         [Column(name: "data_volta", TypeName = "date")]
-        public DateOnly DataVolta { get; set; }
+        public DateTime DataVolta { get; set; }
 
         [Column(name: "id_rota_volta")]
-        public int RotaVoltaId { get; set; }
+        public long RotaVoltaId { get; set; }
 
         [Column(name: "id_instituicao")]
-        public int InstituicaoId { get; set; }
+        public long InstituicaoId { get; set; }
     }
 }
