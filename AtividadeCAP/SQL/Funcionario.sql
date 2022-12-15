@@ -1,5 +1,5 @@
 CREATE TABLE Funcionario(
-    CodigoFuncionario BIGINT NOT NULL IDENTITY(1,1),
+    CodigoFuncionario INT NOT NULL IDENTITY(1,1),
 	Matricula VARCHAR(50) NOT NULL,
     Nome VARCHAR(50) NOT NULL,
 	ContaCorrente VARCHAR(50) NOT NULL,
