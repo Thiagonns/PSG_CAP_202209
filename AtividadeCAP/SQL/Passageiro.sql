@@ -1,5 +1,5 @@
 CREATE TABLE Passageiro(
-    CodigoPassageiro BIGINT NOT NULL IDENTITY(1,1),
+    CodigoPassageiro INT NOT NULL IDENTITY(1,1),
     Nome VARCHAR(50) NOT NULL,
 	Documento VARCHAR(20) NOT NULL,
 	NumeroCartao VARCHAR(20) NOT NULL,
