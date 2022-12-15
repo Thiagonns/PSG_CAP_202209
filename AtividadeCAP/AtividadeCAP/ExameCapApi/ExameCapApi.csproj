@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>Documents\ExameCapApi.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExameCAP.Dominio.EF\ExameCAP.Dominio.EF.csproj" />
+    <ProjectReference Include="..\ExameCAP.Mapping\ExameCAP.Mapping.csproj" />
+    <ProjectReference Include="..\ExameCAP.Poco\ExameCAP.Poco.csproj" />
+    <ProjectReference Include="..\ExameCAP.Repositorio\ExameCAP.Repositorio.csproj" />
+    <ProjectReference Include="..\ExameCAP.Servico\ExameCAP.Servico.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Documents\" />
+  </ItemGroup>
+
+</Project>

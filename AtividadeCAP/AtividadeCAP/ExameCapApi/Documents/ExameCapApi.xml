@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ExameCapApi</name>
+    </assembly>
+    <members>
+        <member name="T:ExameCapApi.Controllers.BilheteController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ExameCapApi.Controllers.BilheteController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ExameCapApi.Controllers.BilheteController.#ctor(ExameCAP.Dominio.EF.ExameContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ExameCapApi.Controllers.BilheteController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.BilheteController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.BilheteController.Post(ExameCAP.Poco.BilhetePoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.BilheteController.Put(ExameCAP.Poco.BilhetePoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.BilheteController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ExameCapApi.Controllers.FuncionarioController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ExameCapApi.Controllers.FuncionarioController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ExameCapApi.Controllers.FuncionarioController.#ctor(ExameCAP.Dominio.EF.ExameContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ExameCapApi.Controllers.FuncionarioController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.FuncionarioController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.FuncionarioController.Post(ExameCAP.Poco.FuncionarioPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.FuncionarioController.Put(ExameCAP.Poco.FuncionarioPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.FuncionarioController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ExameCapApi.Controllers.PassageiroController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ExameCapApi.Controllers.PassageiroController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ExameCapApi.Controllers.PassageiroController.#ctor(ExameCAP.Dominio.EF.ExameContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ExameCapApi.Controllers.PassageiroController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.PassageiroController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.PassageiroController.Post(ExameCAP.Poco.PassageiroPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.PassageiroController.Put(ExameCAP.Poco.PassageiroPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.PassageiroController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
