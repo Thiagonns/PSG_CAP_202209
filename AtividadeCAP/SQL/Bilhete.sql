@@ -1,5 +1,5 @@
 CREATE TABLE Bilhete(
-    CodigoBilhete BIGINT NOT NULL IDENTITY(1,1),
+    CodigoBilhete INT NOT NULL IDENTITY(1,1),
 	NumeroBilhete INT NOT NULL,
     Assento CHAR(3) NOT NULL	
     CONSTRAINT PK_Bilhete PRIMARY KEY (CodigoBilhete)
