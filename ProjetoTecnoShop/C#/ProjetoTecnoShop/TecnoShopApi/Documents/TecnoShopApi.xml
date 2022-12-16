@@ -4,6 +4,306 @@
         <name>TecnoShopApi</name>
     </assembly>
     <members>
+        <member name="T:TecnoShopApi.Controllers.CategoriaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TecnoShopApi.Controllers.CategoriaController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.CategoriaController.#ctor(TecnoShop.Domain.EF.TecnoShopContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.CategoriaController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.CategoriaController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.CategoriaController.Post(TecnoShop.Poco.CategoriaPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.CategoriaController.Put(TecnoShop.Poco.CategoriaPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.CategoriaController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TecnoShopApi.Controllers.CidadeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TecnoShopApi.Controllers.CidadeController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.CidadeController.#ctor(TecnoShop.Domain.EF.TecnoShopContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.CidadeController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.CidadeController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.CidadeController.Post(TecnoShop.Poco.CidadePoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.CidadeController.Put(TecnoShop.Poco.CidadePoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.CidadeController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TecnoShopApi.Controllers.ClienteController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TecnoShopApi.Controllers.ClienteController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.ClienteController.#ctor(TecnoShop.Domain.EF.TecnoShopContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.ClienteController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.ClienteController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.ClienteController.Post(TecnoShop.Poco.ClientePoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.ClienteController.Put(TecnoShop.Poco.ClientePoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.ClienteController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TecnoShopApi.Controllers.EnderecoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TecnoShopApi.Controllers.EnderecoController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EnderecoController.#ctor(TecnoShop.Domain.EF.TecnoShopContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EnderecoController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EnderecoController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EnderecoController.Post(TecnoShop.Poco.EnderecoPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EnderecoController.Put(TecnoShop.Poco.EnderecoPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EnderecoController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TecnoShopApi.Controllers.EstadoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TecnoShopApi.Controllers.EstadoController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EstadoController.#ctor(TecnoShop.Domain.EF.TecnoShopContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EstadoController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EstadoController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EstadoController.Post(TecnoShop.Poco.EstadoPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EstadoController.Put(TecnoShop.Poco.EstadoPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EstadoController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TecnoShopApi.Controllers.EstoqueController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TecnoShopApi.Controllers.EstoqueController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EstoqueController.#ctor(TecnoShop.Domain.EF.TecnoShopContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EstoqueController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EstoqueController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EstoqueController.Post(TecnoShop.Poco.EstoquePoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EstoqueController.Put(TecnoShop.Poco.EstoquePoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.EstoqueController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
         <member name="T:TecnoShopApi.Controllers.FuncionarioController">
             <summary>
             
@@ -148,6 +448,206 @@
             <returns></returns>
         </member>
         <member name="M:TecnoShopApi.Controllers.LojaController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TecnoShopApi.Controllers.MarcaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TecnoShopApi.Controllers.MarcaController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.MarcaController.#ctor(TecnoShop.Domain.EF.TecnoShopContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.MarcaController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.MarcaController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.MarcaController.Post(TecnoShop.Poco.MarcaPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.MarcaController.Put(TecnoShop.Poco.MarcaPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.MarcaController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TecnoShopApi.Controllers.ProdutoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TecnoShopApi.Controllers.ProdutoController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.ProdutoController.#ctor(TecnoShop.Domain.EF.TecnoShopContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.ProdutoController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.ProdutoController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.ProdutoController.Post(TecnoShop.Poco.ProdutoPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.ProdutoController.Put(TecnoShop.Poco.ProdutoPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.ProdutoController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TecnoShopApi.Controllers.VendaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TecnoShopApi.Controllers.VendaController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.VendaController.#ctor(TecnoShop.Domain.EF.TecnoShopContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.VendaController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.VendaController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.VendaController.Post(TecnoShop.Poco.VendaPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.VendaController.Put(TecnoShop.Poco.VendaPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.VendaController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TecnoShopApi.Controllers.VendaItemController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TecnoShopApi.Controllers.VendaItemController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.VendaItemController.#ctor(TecnoShop.Domain.EF.TecnoShopContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.VendaItemController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.VendaItemController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.VendaItemController.Post(TecnoShop.Poco.VendaItemPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.VendaItemController.Put(TecnoShop.Poco.VendaItemPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TecnoShopApi.Controllers.VendaItemController.DeleteById(System.Int32)">
             <summary>
             Exclui o registro associado ao Id informado.
             </summary>
