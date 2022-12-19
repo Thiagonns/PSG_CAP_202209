@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LibTecApi</name>
+    </assembly>
+    <members>
+        <member name="T:LibTecApi.Controllers.ItemController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:LibTecApi.Controllers.ItemController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LibTecApi.Controllers.ItemController.#ctor(LibTec.Domain.EF.LibTecContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:LibTecApi.Controllers.ItemController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ItemController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ItemController.Post(LibTec.Poco.ItemPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ItemController.Put(LibTec.Poco.ItemPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ItemController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LibTecApi.Controllers.ReservaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:LibTecApi.Controllers.ReservaController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LibTecApi.Controllers.ReservaController.#ctor(LibTec.Domain.EF.LibTecContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:LibTecApi.Controllers.ReservaController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ReservaController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ReservaController.Post(LibTec.Poco.ReservaPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ReservaController.Put(LibTec.Poco.ReservaPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ReservaController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LibTecApi.Controllers.TipoItemController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:LibTecApi.Controllers.TipoItemController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LibTecApi.Controllers.TipoItemController.#ctor(LibTec.Domain.EF.LibTecContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:LibTecApi.Controllers.TipoItemController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros da tabela.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.TipoItemController.GetById(System.Int32)">
+            <summary>
+            Lista os registros filtrando por ID.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.TipoItemController.Post(LibTec.Poco.TipoItemPoco)">
+            <summary>
+            Cria um novo registro na tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.TipoItemController.Put(LibTec.Poco.TipoItemPoco)">
+            <summary>
+            Altera um registro da tabela.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.TipoItemController.DeleteById(System.Int32)">
+            <summary>
+            Exclui o registro associado ao Id informado.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
