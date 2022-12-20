@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibTec.Domain.EF", "Autor\LibTec.Domain.EF.csproj", "{F02C5980-2D2A-4288-8998-F7E23768E659}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibTec.Domain.EF", "LibTec.Domain.EF\LibTec.Domain.EF.csproj", "{F02C5980-2D2A-4288-8998-F7E23768E659}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibTec.Mapping", "LibTec.Mapping\LibTec.Mapping.csproj", "{9F8D91F5-B662-4247-9B94-1EA96DF074D3}"
 EndProject

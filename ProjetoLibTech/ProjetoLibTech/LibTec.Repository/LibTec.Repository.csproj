@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Autor\LibTec.Domain.EF.csproj" />
+    <ProjectReference Include="..\LibTec.Domain.EF\LibTec.Domain.EF.csproj" />
     <ProjectReference Include="..\LibTec.Mapping\LibTec.Mapping.csproj" />
     <ProjectReference Include="..\LibTec.Poco\LibTec.Poco.csproj" />
   </ItemGroup>
