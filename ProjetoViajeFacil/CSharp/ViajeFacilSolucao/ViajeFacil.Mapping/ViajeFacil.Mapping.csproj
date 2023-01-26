@@ -10,4 +10,9 @@
     <PackageReference Include="AutoMapper" Version="12.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ViajeFacil.Dominio.EF\ViajeFacil.Dominio.EF.csproj" />
+    <ProjectReference Include="..\ViajeFacil.Poco\ViajeFacil.Poco.csproj" />
+  </ItemGroup>
+
 </Project>
