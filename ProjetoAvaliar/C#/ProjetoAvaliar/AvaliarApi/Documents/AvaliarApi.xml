@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AvaliarApi</name>
+    </assembly>
+    <members>
+        <member name="T:AvaliarApi.Controllers.CorrentistaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:AvaliarApi.Controllers.CorrentistaController.servico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AvaliarApi.Controllers.CorrentistaController.#ctor(Avaliar.Domain.EF.AvaliarContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:AvaliarApi.Controllers.CorrentistaController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros de correntista por Paginação.
+            </summary>
+            <param name="take"> Onde inicia os resultados da pesquisa. </param>
+            <param name="skip"> Quantos registros serão retornados. </param>
+            <returns> Todos os registros. </returns>
+        </member>
+        <member name="M:AvaliarApi.Controllers.CorrentistaController.GetByInstituicao(System.Int32)">
+            <summary>
+            Listar todos os registros da tabela Correntista por código da Instituição.
+            </summary>
+            <param name="instcod"> Chave de pesquisa. </param>
+            <returns> Registro localizado. </returns>
+        </member>
+        <member name="M:AvaliarApi.Controllers.CorrentistaController.GetById(System.Int32)">
+            <summary>
+             Lista os registro usando a chave de correntista.
+            </summary>
+            <param name="chave"> Chave de pesquisa. </param>
+            <returns> Registro localizado. </returns>
+        </member>
+        <member name="M:AvaliarApi.Controllers.CorrentistaController.Post(Avaliar.Poco.CorrentistaPoco)">
+            <summary>
+            Inclui um novo dado em correntista.
+            </summary>
+            <param name="poco"> Dados que será incluido. </param>
+            <returns> Dados incluido. </returns>
+        </member>
+        <member name="M:AvaliarApi.Controllers.CorrentistaController.Put(Avaliar.Poco.CorrentistaPoco)">
+            <summary>
+            Altera um dado existente em correntista.
+            </summary>
+            <param name="poco"> Altera o dado selecionado. </param>
+            <returns> Altera o dado selecionado. </returns>
+        </member>
+        <member name="M:AvaliarApi.Controllers.CorrentistaController.DeleteById(System.Int32)">
+            <summary>
+            Exclui um registro existente em correntista, utilizando um id.
+            </summary>
+            <param name="chave"> Chave para localização. </param>
+            <returns> Dado excluido por Id. </returns>
+        </member>
+        <member name="M:AvaliarApi.Controllers.CorrentistaController.GetAllEnvelope(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros de modo envelopado para o arquivo JSON
+            </summary>
+            <param name="limite"></param>
+            <param name="salto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AvaliarApi.Controllers.CorrentistaController.GetPorEstadoEnvelope(System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros de modo envelopado para o arquivo JSON filtrados pelo código da instituição.
+            </summary>
+            <param name="instcod"></param>
+            <param name="limite"></param>
+            <param name="salto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AvaliarApi.Controllers.CorrentistaController.GetByIdEnvelope(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AvaliarApi.Controllers.InstituicaoBancariaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AvaliarApi.Controllers.InstituicaoBancariaController.#ctor(Avaliar.Domain.EF.AvaliarContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AvaliarApi.Controllers.InstituicaoBancariaController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lista todos os registros de Intituição bancária por Paginação.
+            </summary>
+            <param name="take"> Onde inicia os resultados da pesquisa. </param>
+            <param name="skip"> Quantos registros serão retornados. </param>
+            <returns> Todos os registros. </returns>
+        </member>
+        <member name="M:AvaliarApi.Controllers.InstituicaoBancariaController.GetById(System.Int32)">
+            <summary>
+             Lista os registro usando a chave de Intituição bancária.
+            </summary>
+            <param name="chave"> Chave de pesquisa. </param>
+            <returns> Registro localizado. </returns>
+        </member>
+        <member name="M:AvaliarApi.Controllers.InstituicaoBancariaController.Post(Avaliar.Poco.InstituicaoBancariaPoco)">
+            <summary>
+            Inclui um novo dado na tabela Intituição bancária.
+            </summary>
+            <param name="poco"> Dados que será incluido. </param>
+            <returns> Dados incluido. </returns>
+        </member>
+        <member name="M:AvaliarApi.Controllers.InstituicaoBancariaController.Put(Avaliar.Poco.InstituicaoBancariaPoco)">
+            <summary>
+            Altera um dado existente na tabela Intituição bancária.
+            </summary>
+            <param name="poco"> Altera o dado selecionado. </param>
+            <returns> Altera o dado selecionado. </returns>
+        </member>
+        <member name="M:AvaliarApi.Controllers.InstituicaoBancariaController.DeleteById(System.Int32)">
+            <summary>
+            Exclui um registro existente em Intituição bancária, utilizando um id.
+            </summary>
+            <param name="chave"> Chave para localização. </param>
+            <returns> Dado excluido por Id. </returns>
+        </member>
+        <member name="M:AvaliarApi.Controllers.InstituicaoBancariaController.GetAllEnvelope(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros de modo envelopado para o arquivo JSON
+            </summary>
+            <param name="limite"></param>
+            <param name="salto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AvaliarApi.Controllers.InstituicaoBancariaController.GetByIdEnvelope(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
